@@ -308,55 +308,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &1409376819
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1409376821}
-  - component: {fileID: 1409376820}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1409376820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1409376819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f80febbee0ee3cd4b91268569e3ab206, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1409376821
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1409376819}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1501375421 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2795767695035594905, guid: 1c05e27995442cc4590e26543e54891c, type: 3}
-  m_PrefabInstance: {fileID: 4995003743462990817}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1981705808
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,14 +422,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1050321652230025810, guid: 1c05e27995442cc4590e26543e54891c, type: 3}
-      propertyPath: projectilePrefab
-      value: 
-      objectReference: {fileID: 4008043094558561384, guid: 7e04930e2fbfabf40aeb2c88eadbfc27, type: 3}
-    - target: {fileID: 1050321652230025810, guid: 1c05e27995442cc4590e26543e54891c, type: 3}
-      propertyPath: projectileSpawnPoint
-      value: 
-      objectReference: {fileID: 1501375421}
     - target: {fileID: 2455982064406109604, guid: 1c05e27995442cc4590e26543e54891c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -534,6 +477,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 963194228}
   - {fileID: 705507995}
-  - {fileID: 1409376821}
   - {fileID: 4995003743462990817}
   - {fileID: 1981705812}
