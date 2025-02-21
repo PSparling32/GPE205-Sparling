@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2231084692824778380}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.611, z: 1.032}
+  m_LocalPosition: {x: 0, y: 0.611, z: 1.258}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -109,11 +109,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e234c92ee6ea79e46b161184920be1db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpawnPoint: {fileID: 0}
+  projectileSpawnPoint: {fileID: 2795767695035594905}
   damage: 1
   fireDelay: 1
   projectileForce: 50
-  projectilePrefab: {fileID: 2231084692824778380}
+  projectilePrefab: {fileID: 4008043094558561384, guid: 7e04930e2fbfabf40aeb2c88eadbfc27, type: 3}
 --- !u!114 &3997609298146907932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c804e6868181b44dbe0d353bdf56d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 2
+  maxHealth: 4
+  spawnWithMaxHealth: 1
 --- !u!1001 &310834551230117528
 PrefabInstance:
   m_ObjectHideFlags: 0
