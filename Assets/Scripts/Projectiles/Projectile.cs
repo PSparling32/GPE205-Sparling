@@ -6,21 +6,24 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField]
     private string owner; //who owns it
+
     [SerializeField]
     private int damage; //damage dealt
 
     [SerializeField]
     private float lifeTime; //how long the projectile is alive for before being destroyed automatically
-    public void SetData(string owner, int damage) //sets projectile data, called by instantiator
+
+    public void SetData(string owner, int damage, float lifeTime) //sets projectile data, called by instantiator
     {
         this.owner = owner;
         this.damage = damage;
+        this.lifeTime = lifeTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        lifeTime-= Time.deltaTime; //reduce how long it has left to live
+        lifeTime -= Time.deltaTime; //reduce how long it has left to live
 
         if (lifeTime < 0) //if liftime is 0
         {

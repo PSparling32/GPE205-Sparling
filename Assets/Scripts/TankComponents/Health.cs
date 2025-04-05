@@ -6,10 +6,15 @@ public class Health : MonoBehaviour
 {
     [SerializeField]
     int currentHealth = 2; //current health
+
     [SerializeField]
     int maxHealth = 4; //maximum health
+
     [SerializeField]
     bool spawnWithMaxHealth = true; //should the component start with max health
+
+    public delegate void TakeDamageDelegate(int damage);
+    public event TakeDamageDelegate OnTakeDamage;
 
     private void Start()
     {
@@ -24,11 +29,14 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        if (currentHealth < 0) { //clamps health
+        if (currentHealth < 0)
+        { //clamps health
             currentHealth = 0;
         }
 
         if (currentHealth == 0) //is health 0
             OnDie(); //triggers OnDie
+
+        OnTakeDamage?.Invoke(damage); //triggers OnTakeDamage event
     }
 }

@@ -19,31 +19,34 @@ public class TankPawn : Pawn
         GameManager.GetInstance().AddPawn(this);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Move(bool forward)
     {
-        if (forward)
-            movement.MoveForward();
-        else
-            movement.MoveBackwards();
+        movement.Move(forward);
     }
 
     public void Rotate(bool left)
     {
-        if(left)
-            movement.RotateLeft();
-        else
-            movement.RotateRight();
+        movement.Rotate(!left);
     }
 
     public void Fire(string name = "None")
     {
-        if(shooter.CanFire())
+        if (shooter.CanFire())
             shooter.Fire(name);
+    }
+
+    public Shooter GetShooter()
+    {
+        return shooter;
+    }
+
+    public Movement GetMovement()
+    {
+        return movement;
+    }
+
+    public Health GetHealth()
+    {
+        return health;
     }
 }
