@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    protected TankPawn pawn;
+    protected string name = "Controller";
 
-    // Update is called once per frame
-    void Update()
+    protected void SetUp()
     {
-        
+        pawn = GetComponent<TankPawn>();
+        if (pawn == null)
+        {
+            Debug.LogError("Controller: No TankPawn found on this GameObject.");
+        }
+        GameManager.GetInstance().AddController(this);
     }
 }
